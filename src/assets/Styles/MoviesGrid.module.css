@@ -4,11 +4,20 @@
     gap: 40px;
     padding: 40px;
     justify-content: center;
+    
 }
 
 @media (max_width: 560px) {
     .moviesGrid {
         grid-template-columns: 100%;
+        
     
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .moviesGrid {
+        margin-top: 20px;
     }
 }

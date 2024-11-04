@@ -1,9 +1,15 @@
 import { useState } from 'react';
 import styles from '../assets/Styles/Navbar.module.css'
 import { FaSearch } from "react-icons/fa";
+import { IoMdPerson } from "react-icons/io";
 import { useNavigate } from 'react-router-dom';
 import { useQuery } from '../Hooks/useQuery';
 import { useEffect } from 'react';
+import Logo from '../assets/IMG/logo_Veta4.png'
+import { Link } from "react-router-dom";
+
+
+
 
 export function Navbar() {
     const query = useQuery();
@@ -23,13 +29,36 @@ export function Navbar() {
     };
 
     return (
-        <form className = {styles.Searchcontainer} onSubmit = {handleSubmit}>
-            <div className = {styles.searchBox}>
-                <input type="text" className = {styles.searchInput} value = {searchText} onChange = {(e) => setSearchText(e.target.value)}/>
-                <button className = {styles.SearchButton} type = "submit" >
-                    <FaSearch size = {20}/>
-                </button>
+        <>
+            <div className = {styles.navbar}>
+                <Link to = "/"><img src = {Logo} alt="" className = {styles.logo} /></Link>
+                <ul className = {styles.list}>
+                    <Link to = "/"><li>Home</li></Link>
+                    <Link to = "/movies"><li>Movies</li></Link>
+                    <Link to = "/about"><li>About us</li></Link>
+                    <Link to = "/contact"><li>Contact Us </li></Link>
+                    
+                    
+                </ul>
+                <form className = {styles.Searchcontainer} onSubmit = {handleSubmit}>
+                    <div className = {styles.searchBox}>
+                        <input type="text" className = {styles.searchInput} value = {searchText} onChange = {(e) => setSearchText(e.target.value)}/>
+                        <button className = {styles.SearchButton} type = "submit" >
+                            <FaSearch size = {20}/>
+                        </button>
+                    </div>
+                </form>
+                <div className = {styles.goToLogin}>
+                    <Link to = "/login"><IoMdPerson /></Link> 
+                </div>
+                
+                
+                
+                
+                
             </div>
-        </form>
+            
+        </>
+        
     )
 }
