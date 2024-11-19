@@ -3,6 +3,7 @@
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 50px;  
+    
 }
 
 .col {
@@ -23,11 +24,35 @@
 
 .movieDetails {
     font-size: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    
+    
+
+    
+    
+    
     
 }
 
 .firstItem {
     margin-top: 0;
+}
+
+.button {
+    background-color: red;
+    margin-top: 25px;
+    padding: 10px 70px;
+    border-radius: 30px;
+    
+    
+   
+
+
+    &:hover {
+        cursor: pointer;
+    }
+    
 }
 
 @media (max-width: 1200px) {

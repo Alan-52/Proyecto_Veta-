@@ -120,10 +120,18 @@
     }
 
     .list li {
-        
         display: block;
         margin: 20px 0;
     }
     
 }
 
+@media (min-width: 1200px) {
+
+    .list {
+        display: flex;
+        justify-content: space-evenly;
+       
+    }
+    
+}

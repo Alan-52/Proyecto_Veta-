@@ -47,8 +47,12 @@ export function MovieDetails () {
                         {movie.genres.map(genre => genre.name).join(" - ") }
                     </p>
                     <p><strong className = {styles.detailTtitles}>Description:</strong>  {movie.overview}</p>
+                    <button className = {styles.button}>Ver</button>  
+                    
                 </div>
+                
             </div>
+            
         </>
         
     )

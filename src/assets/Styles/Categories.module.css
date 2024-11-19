@@ -19,11 +19,12 @@
     margin-bottom: 70px;
     font-size: 40px;
     font-family: 'Nosifer', sans-serif;
+    
 }
 
 .AccionTitle {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 80px;
     margin-bottom: 70px;
     font-size: 80px;
     font-family: 'Accion-Title', sans-serif;
@@ -73,6 +74,8 @@
     transform:
         rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg ))
         translateZ(550px);
+
+    
     
     
     img {
@@ -81,6 +84,7 @@
         object-fit: cover;
         border-radius: 50px 15px 50px 15px;
         box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.1), 0px 8px 20px rgba(255, 255, 255, 0.05);
+        
 
         &:hover {
             cursor: pointer;
