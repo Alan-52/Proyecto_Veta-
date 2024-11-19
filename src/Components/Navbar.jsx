@@ -17,26 +17,35 @@ export function Navbar() {
 
     const [searchText, setSearchText] = useState("");
 
+
     useEffect(() => {
         setSearchText(search || "");
     }, [search]);
 
     const history = useNavigate();
 
+    
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        history("/?search=" + searchText);
+        history("/?search=" + searchText );
+        setSearchText(" ");
+  
     };
+
+    
+
+   
 
     return (
         <>
             <div className = {styles.navbar}>
                 <Link to = "/"><img src = {Logo} alt="" className = {styles.logo} /></Link>
                 <ul className = {styles.list}>
-                    <Link to = "/"><li>Home</li></Link>
-                    <Link to = "/movies"><li>Movies</li></Link>
-                    <Link to = "/about"><li>About us</li></Link>
-                    <Link to = "/contact"><li>Contact Us </li></Link>
+                    <Link to = "/"><li>Inicio</li></Link>
+                    <Link to = "/movies"><li>Cartelera</li></Link>
+                    <Link to = "/about"><li>Sobre Nosotros</li></Link>
+                    <Link to = "/contact"><li>Contactanos </li></Link>
                     
                     
                 </ul>

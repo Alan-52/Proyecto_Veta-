@@ -1,7 +1,7 @@
 // import { MoviesGrid } from "./Components/MoviesGrid";
 import { LandingPage } from "./Pages/LandingPage";
 import { MovieDetails } from "./Pages/MovieDetails";
-import { Movies } from './Components/Movies';
+import { Categories } from './Components/Categories';
 import { AboutUs } from "./Components/AboutUs";
 import { ContactUs } from "./Components/ContactUs";
 import { Login } from "./Components/Login";
@@ -23,7 +23,7 @@ export function App() {
           <Route path="/movies/:movieId" element={<MovieDetails />} />
           <Route path="/" element={<LandingPage />} />
           <Route path="*" element={<Navigate to="/" />} />
-          <Route path="/movies" element={<Movies />} />
+          <Route path="/movies" element={<Categories />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/login" element={<Login />} />

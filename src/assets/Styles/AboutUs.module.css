@@ -1,0 +1,71 @@
+@keyframes bounceInFade {
+    0% {
+      opacity: 0;
+      transform: scale(0.3);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+    70% {
+      transform: scale(0.9);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+.paragraph {
+    
+    margin: 70px auto;
+    width: 50%;
+    background-image: url(../IMG/bg-aboutUs.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 80px 100px;
+    animation: bounceInFade 0.8s ease-out forwards;
+    border-radius: 50px;
+    z-index: -1;
+
+    p {
+        font-size: 16px;
+    }
+
+}
+
+.paragraph::after {
+    content: "";
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.7;
+    border-radius: 50px;
+
+  
+}
+
+
+.title {
+    text-align: center;
+    padding: 50px 0 0 0;
+}
+
+.mainText {
+    background-image: url(../IMG/bg-abouUsMain.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: -10px;
+    height: 1000px;
+
+}
+
+
+
+  
+ 
